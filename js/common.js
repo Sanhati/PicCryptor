@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const showOptions = document.getElementById('showOptions');
     const encryptedImage = document.getElementById('encryptedImage');
     const downloadEncryptedLink = document.getElementById('downloadEncryptedLink');                               
-    const decryptedImage = document.getElementById('decryptedImage');                                             
+    const decryptedImage = document.getElementById('decryptedImage'); 
+    const decryptShow = document.getElementById('decryptShow');                                             
     const downloadDecryptedLink = document.getElementById('downloadDecryptedLink');
     const encryptButton = document.getElementById('encryptButton');
     const decryptButton = document.getElementById('decryptButton');
@@ -178,12 +179,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 downloadDecryptedLink.href = URL.createObjectURL(new Blob([new Uint8Array(decryptedData.buffer)], { type: file.type }));
                 downloadDecryptedLink.style.display = 'block';
     
-                if (encryptedImage.style.display === 'block') {
-                    encryptedImage.style.display = 'none';
-                    downloadEncryptedLink.style.display = 'none';
-                }
+                // if (encryptedImage.style.display === 'block') {
+                //     encryptedImage.style.display = 'none';
+                //     downloadEncryptedLink.style.display = 'none';
+                // }
 
-                decryptedImage.style.display = "block";
+                decryptShow.style.display = "block";
             };
     
             reader.readAsArrayBuffer(file);
