@@ -40,20 +40,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Image Decryption</title>
 </head>
 <body>
     <header>
-        <h1>Image Decryption</h1>
+        <div class="typewriter" style="height: 100px;">
+            <h1>PicCryptor</h1>
+        </div>
+        
     </header>
-    <main>
-        <section class="action-button">
+    <main style="margin-top: 40px;">
+        
+        <div class="action-button">
             <a href="index.html">Back to Home</a>
-        </section>
-        <section class="image-actions">
+        </div>
+        <section class="image-actions" style="margin-top: 100px; color: white !important;">
             <input type="file" id="imageInput2" accept="image/*" style="display: none">                 <!-- Change made by Sayan - 1 (id modification) -->
             <button id="uploadButton2">Upload Encrypted Image</button>                                  <!-- Change made by Sayan - 2 (id modification) -->
-            <label for="decryptionKey">Decryption Key: </label>
+            <label for="decryptionKey" style="color: white" >Decryption Key: </label>
             <input type="text" id="decryptionKey">
             <button id="decryptButton">Decrypt</button>
             <a id="downloadDecryptedLink" class="download-link" style="display: none" download="decrypted_image.png">Download Decrypted Image</a>
@@ -68,7 +75,7 @@
         </section> -->
         <section class="image-preview decrypted">
             <h2>Decrypted Image</h2>
-            <img id="decryptedImage" alt="Decrypted Image" width="150" height="150">
+            <img id="decryptedImage" alt="Decrypted Image" width="150" height="150" style="display: none;">
         </section>
     </main>
     <script src="js/common.js"></script>

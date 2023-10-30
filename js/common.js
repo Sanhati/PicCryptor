@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const uploadButton = document.getElementById('uploadButton');
     const uploadButton2 = document.getElementById('uploadButton2');
     const originalImagePreview = document.getElementById('originalImagePreview');
+    const showOptions = document.getElementById('showOptions');
     const encryptedImage = document.getElementById('encryptedImage');
     const downloadEncryptedLink = document.getElementById('downloadEncryptedLink');                               
     const decryptedImage = document.getElementById('decryptedImage');                                             
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         reader.onload = function (event) {
             originalImagePreview.src = event.target.result;
             originalImagePreview.style.display = 'block';
+            showOptions.style.display = 'flex';
+            showOptions.style.flexDirection = 'column';
         };
     reader.readAsDataURL(file);
     }
@@ -179,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     encryptedImage.style.display = 'none';
                     downloadEncryptedLink.style.display = 'none';
                 }
+
+                decryptedImage.style.display = "block";
             };
     
             reader.readAsArrayBuffer(file);
