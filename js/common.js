@@ -33,7 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const encryptButton = document.getElementById('encryptButton');
     const decryptButton = document.getElementById('decryptButton');
     const decryptionKeyInput = document.getElementById('decryptionKey');
-
+    const signs = document.querySelectorAll('x-sign')
+    const randomIn = (min, max) => (
+    Math.floor(Math.random() * (max - min + 1) + min)
+    )
+        
     // let encryptionKey = null;                                                                                     
 
     // Function to show a preview of the uploaded image
@@ -96,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
     // });
 
-    if(encryptButton){                                                                                       // Change made by Sayan - 7 (If statement added)
+    if(encryptButton){                                                                                       
         encryptButton.addEventListener('click', function () {
             if (imageInput.files.length === 0) {
                 alert('Please select an image to encrypt.');
@@ -115,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Display the encryption key
                 alert(`Encryption Key: ${encryptionKey}`);
                 
-                const downloadEncryptedLink = document.getElementById('downloadEncryptedLink');             // Change made by Sayan - 8 (Declared const inside block)
+                const downloadEncryptedLink = document.getElementById('downloadEncryptedLink');             
                 const encryptedData = encryptImage(imageData, encryptionKey);
                 const encryptedBlob = new Blob([encryptedData], { type: file.type });
                 // const encryptedBlob = new Blob([new Uint8Array(encryptedData.buffer)], { type: file.type });
@@ -137,30 +141,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if(uploadButton2){                                                                                        // Change made by Sayan - 9 (If statement added)
+    if(uploadButton2){                                                                                        
         uploadButton2.addEventListener('click', function () {                                                      
             // Trigger the hidden file input element to allow the user to select an image for decryption
             imageInput2.click();
         });
     }
 
-    if(decryptButton){                                                                                         // Change made by Sayan - 10 (If statement added)
+    if(decryptButton){                                                                                         
         decryptButton.addEventListener('click', function () {
             if (decryptionKeyInput === null) {
                 alert('Please encrypt an image first to generate the key.');
                 return;
             }
     
-            if (imageInput2.files.length === 0) {                                                              // Change made by Sayan - 11 (imageInput -> imageInput2)
+            if (imageInput2.files.length === 0) {                                                              
                 alert('Please select an image to decrypt.');
                 return;
             }
     
-            const file = imageInput2.files[0];                                                                 // Change made by Sayan - 12 (imageInput -> imageInput2)
+            const file = imageInput2.files[0];                                                                 
             const reader = new FileReader();
     
             reader.onload = function (event) {
-                // const decryptedImage = document.getElementById('decryptedImage');                              // Change made by Sayan - 13 (Declared const inside block)
+                // const decryptedImage = document.getElementById('decryptedImage');                              
                 const imageData = new Uint8Array(event.target.result);
                 const decryptionKey = parseInt(decryptionKeyInput.value, 10);
                 const decryptedData = decryptImage(imageData, decryptionKey);
