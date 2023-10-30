@@ -1,0 +1,62 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.action-button {
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    background-color: #b5cbe3;
+    color: #555050;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.image-actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: #b5cbe3;
+    color: #555050;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.download-link {
+    display: block !important;
+    text-align: center;
+    margin-top: 10px;
+    color: #555050;
+    text-decoration: none;
+}

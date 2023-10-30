@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Image Encryption</title>
+</head>
+<body>
+    <header>
+        <h1>Image Encryption</h1>
+    </header>
+    <main>
+        <section class="action-button">
+            <a href="index.html">Back to Home</a>
+        </section>
+        <section class="image-actions">
+            <input type="file" id="imageInput" accept="image/*" style="display: none">
+            <button id="uploadButton">Upload Image</button>
+            <button id="encryptButton">Encrypt</button>
+            <a id="downloadEncryptedLink" class="download-link" style="display: none" download="encrypted_image.png">Download Encrypted Image</a>
+        </section>
+        <section class="image-preview">
+            <h2>Original Image</h2>
+            <img id="originalImagePreview" alt="Original Image">
+        </section>
+        <section class="image-preview encrypted">
+            <!-- <h2>Encrypted Image</h2>
+            <a id="downloadEncryptedLink" class="download-link" style="display: none" download="encrypted_image.png">Download Encrypted Image</a> -->
+        </section>
+    </main>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/encryption.js"></script> -->
+</body>
+</html>
