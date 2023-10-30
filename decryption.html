@@ -52,18 +52,21 @@
         </div>
         
     </header>
-    <main style="margin-top: 40px;">
-        
+    <main >
+        <div style="height: 150px;" ></div>
         <div class="action-button">
             <a href="index.html">Back to Home</a>
         </div>
-        <section class="image-actions" style="margin-top: 100px; color: white !important;">
-            <input type="file" id="imageInput2" accept="image/*" style="display: none">                 <!-- Change made by Sayan - 1 (id modification) -->
-            <button id="uploadButton2">Upload Encrypted Image</button>                                  <!-- Change made by Sayan - 2 (id modification) -->
-            <label for="decryptionKey" style="color: white" >Decryption Key: </label>
-            <input type="text" id="decryptionKey">
-            <button id="decryptButton">Decrypt</button>
-            <a id="downloadDecryptedLink" class="download-link" style="display: none" download="decrypted_image.png">Download Decrypted Image</a>
+        <section class="image-actions" style="margin: auto; margin-top: 50px; color: white !important; display: flex; flex-direction: column; width: 400px; ">
+            <input type="file" id="imageInput2" accept="image/*" style="display: none">   
+            <button id="uploadButton2" style="margin: 20px;">Upload Encrypted Image</button>         
+            <div style="display: flex; flex-direction: row; margin: 20px;">
+
+                <label for="decryptionKey" style="margin-right: 10px;color: white;display: flex;align-items: center;">Decryption Key: </label>
+                <input type="text" id="decryptionKey" style="padding: 5px;width: 208px;">
+            </div>
+            <button id="decryptButton" style="margin: 20px;">Decrypt</button>
+            
         </section>
         <!-- <section class="image-preview">
             <h2>Original Image</h2>
@@ -73,9 +76,10 @@
             <h2>Encrypted Image</h2>
             <img id="encryptedImagePreview" alt="Encrypted Image" width="150" height="150">
         </section> -->
-        <section class="image-preview decrypted">
+        <section class="image-preview decrypted" id="decryptShow" style="display: none;">
             <h2>Decrypted Image</h2>
-            <img id="decryptedImage" alt="Decrypted Image" width="150" height="150" style="display: none;">
+            <img id="decryptedImage" alt="Decrypted Image" width="150" height="150" >
+            <a id="downloadDecryptedLink" class="download-link" style="display: none; width: 400px; margin: auto; margin-top: 10px;" download="decrypted_image.png">Download Decrypted Image</a>
         </section>
     </main>
     <script src="js/common.js"></script>
