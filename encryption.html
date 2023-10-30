@@ -31,20 +31,22 @@
             <div class="button-container">
                 <button id="uploadButton" class="upload-button">Upload Image</button>
             </div>
+            
+            <section id="showOptions" style="display: none">
+                <h2>Original Image</h2>
+                <img id="originalImagePreview" alt="Please upload an image">
+            </section>
 
-            <div class="button-container">
+            <section class="button-container"  >
                 <button id="encryptButton" class="encrypt-button">Encrypt</button>
-            </div>
+            </section>
 
-            <div class="button-container">
+            <div class="button-container" >
                 <a id="downloadEncryptedLink" class="download-link" style="display: none" download="encrypted_image.png">Download Encrypted Image</a>
             </div>
         </div>
 
-        <section class="image-preview">
-            <h2>Original Image</h2>
-            <img id="originalImagePreview" alt="Original Image">
-        </section>
+        
 
         <section class="image-preview encrypted">
             <!-- <h2>Encrypted Image</h2>
